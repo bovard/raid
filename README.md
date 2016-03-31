@@ -1,5 +1,7 @@
 # Rogue AI Dungeon
 
+[![Join the chat at https://gitter.im/bovard/raid](https://badges.gitter.im/bovard/raid.svg)](https://gitter.im/bovard/raid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A Rogue-like game based on the [battlecode](http://battlecode.org) API. We hope this game will be fun and help people prepare to compete in battlecode!
 
 Check out the [latest version](http://bovard.github.io/raid/)!
