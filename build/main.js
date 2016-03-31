@@ -5646,6 +5646,9 @@ function cave(height, width, mapOptions) {
                 if (MapUtils.spawnInValidLocationInCircle(map, circle.center, circle.radius, type)) {
                     spawned++;
                 }
+                if (spawned >= count) {
+                    break;
+                }
             }
         }
     });
@@ -5924,6 +5927,9 @@ function forest(height, width, mapOptions) {
                 if (MapUtils.spawnInValidLocationInCircle(map, center, 3, type)) {
                     spawned++;
                 }
+                if (spawned >= count) {
+                    break;
+                }
             }
         }
     });
@@ -6058,6 +6064,9 @@ function maze(height, width, mapOptions) {
             if (MapUtils.spawnInValidLocationInCircle(map, center, 3, boss)) {
                 spawned++;
             }
+            if (spawned >= numBoss) {
+                break;
+            }
         }
     }
 
@@ -6069,6 +6078,9 @@ function maze(height, width, mapOptions) {
             idx++;
             if (MapUtils.spawnInValidLocationInBox(map, map.upperLeft, map.bottomRight, primaryEnemy)) {
                 spawned++;
+            }
+            if (spawned >= numPrimaryEnemy) {
+                break;
             }
         }
     }
@@ -6084,6 +6096,9 @@ function maze(height, width, mapOptions) {
             if (MapUtils.spawnInValidLocationInCircle(map, corner, 3, secondaryEnemy)) {
                 spawned++;
             }
+            if (spawned >= numSecondaryEnemy) {
+                break;
+            }
         }
     }
 
@@ -6096,6 +6111,9 @@ function maze(height, width, mapOptions) {
             if (MapUtils.spawnInValidLocationInCircle(map, exit, 3, rareEnemy)) {
                 spawned++;
             }
+            if (spawned >= numRareEnemy) {
+                break;
+            }
         }
     }
 
@@ -6107,6 +6125,9 @@ function maze(height, width, mapOptions) {
             idx++;
             if (MapUtils.spawnInValidLocationInCircle(map, center, 3, swarmEnemy)) {
                 spawned++;
+            }
+            if (spawned >= numSwarmEnemy) {
+                break;
             }
         }
     }
@@ -6674,6 +6695,9 @@ function walk(height, width, mapOptions) {
                 circle = circles[i];
                 if (MapUtils.spawnInValidLocationInCircle(map, circle.center, circle.radius, type)) {
                     spawned++;
+                }
+                if (spawned >= count) {
+                    break;
                 }
             }
         }
